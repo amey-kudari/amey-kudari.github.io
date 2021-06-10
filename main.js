@@ -18,7 +18,7 @@ function setActive(id){
 function truncate(ptext){ // truncate text based on browser size
     let maxLength = parseInt(20*window.innerWidth/window.screen.width); // by trial and error, max number of charecters 
     let segLength = (maxLength-3) // length of prefix and suffix
-    if(maxLength >= ptext.length){
+    if(maxLength*2-3 >= ptext.length){
         return ptext; // return text as it fits in the browser
     } else {
         return ptext.slice(0,segLength) + "..." + ptext.slice(-segLength,)
